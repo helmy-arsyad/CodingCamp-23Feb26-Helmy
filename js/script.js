@@ -114,11 +114,43 @@ document.addEventListener('DOMContentLoaded', function () {
         el.classList.add('visible');
     });
 
-    // ===== WELCOME MODAL HANDLING =====
-    const welcomeModal = document.getElementById('welcome-modal');
-    const welcomeNameInput = document.getElementById('welcome-name-input');
-    const welcomeSubmitBtn = document.getElementById('welcome-submit');
-    const visitorNameSpan = document.getElementById('visitor-name');
+    // ===== NAME TOAST HANDLING =====
+const visitorNameSpan = document.getElementById('visitor-name');
+const nameToast = document.getElementById('name-toast');
+const toastInput = document.getElementById('toast-name-input');
+const toastBtn = document.getElementById('toast-name-btn');
+
+if (visitorNameSpan && nameToast) {
+    const savedName = localStorage.getItem('visitorName');
+
+    if (savedName) {
+        visitorNameSpan.textContent = savedName;
+    } else {
+        setTimeout(() => {
+            nameToast.classList.add('show');
+            toastInput.focus();
+        }, 800);
+
+        toastBtn.addEventListener('click', function () {
+            const name = toastInput.value.trim();
+
+            if (!name) {
+                alert("Nama tidak boleh kosong!");
+                return;
+            }
+
+            visitorNameSpan.textContent = name;
+            localStorage.setItem('visitorName', name);
+            nameToast.classList.remove('show');
+        });
+
+        toastInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                toastBtn.click();
+            }
+        });
+    }
+}
 
     // Only run welcome modal code if elements exist
     if (visitorNameSpan) {
