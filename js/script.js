@@ -1,8 +1,3 @@
-/* ========================================
-   MAIN JAVASCRIPT
-   Elegant Animations & Interactions
-   ======================================== */
-
 document.addEventListener('DOMContentLoaded', function () {
 
     // ===== HEADER SCROLL EFFECT =====
@@ -114,85 +109,45 @@ document.addEventListener('DOMContentLoaded', function () {
         el.classList.add('visible');
     });
 
-    // ===== NAME TOAST HANDLING =====
-const visitorNameSpan = document.getElementById('visitor-name');
-const nameToast = document.getElementById('name-toast');
-const toastInput = document.getElementById('toast-name-input');
-const toastBtn = document.getElementById('toast-name-btn');
-const siteBlocker = document.getElementById('site-blocker');
+    // ===== NAME LOCK SYSTEM =====
+    const visitorNameSpan = document.getElementById('visitor-name');
+    const nameToast = document.getElementById('name-toast');
+    const toastInput = document.getElementById('toast-name-input');
+    const toastBtn = document.getElementById('toast-name-btn');
+    const siteBlocker = document.getElementById('site-blocker');
 
-if (visitorNameSpan && nameToast) {
-    const savedName = localStorage.getItem('visitorName');
+    if (visitorNameSpan && nameToast && siteBlocker) {
 
-    if (savedName) {
-        visitorNameSpan.textContent = savedName;
-    } else {
-        // Aktifkan blocker
-        siteBlocker.classList.add('active');
-        document.body.style.overflow = 'hidden';
-
-        setTimeout(() => {
-            nameToast.classList.add('show');
-            toastInput.focus();
-        }, 500);
-
-        toastBtn.addEventListener('click', function () {
-            const name = toastInput.value.trim();
-
-            if (!name) {
-                alert("Nama tidak boleh kosong!");
-                return;
-            }
-
-            visitorNameSpan.textContent = name;
-            localStorage.setItem('visitorName', name);
-
-            // Hilangkan blocker
-            nameToast.classList.remove('show');
-            siteBlocker.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        toastInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                toastBtn.click();
-            }
-        });
-    }
-}
-
-    // Only run welcome modal code if elements exist
-    if (visitorNameSpan) {
-        // Load saved name on page load
         const savedName = localStorage.getItem('visitorName');
 
         if (savedName) {
             visitorNameSpan.textContent = savedName;
-            // Hide modal if it exists
-            if (welcomeModal) {
-                welcomeModal.style.display = 'none';
-            }
         } else {
-            // Show modal if it exists and no name saved
-            if (welcomeModal && welcomeNameInput && welcomeSubmitBtn) {
-                welcomeModal.style.display = 'flex';
-                setTimeout(() => welcomeNameInput.focus(), 100);
 
-                // Handle name submission
-                welcomeSubmitBtn.addEventListener('click', function () {
-                    const name = welcomeNameInput.value.trim() || 'Visitor';
-                    visitorNameSpan.textContent = name;
-                    localStorage.setItem('visitorName', name);
-                    welcomeModal.style.display = 'none';
-                });
+            siteBlocker.classList.add('active');
+            nameToast.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            toastInput.focus();
 
-                // Enter key support
-                welcomeNameInput.addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        welcomeSubmitBtn.click();
-                    }
-                });
+            function saveName() {
+                const name = toastInput.value.trim();
+                if (!name) {
+                    alert("Nama tidak boleh kosong!");
+                    return;
+                }
+
+                localStorage.setItem('visitorName', name);
+                visitorNameSpan.textContent = name;
+
+                siteBlocker.classList.remove('active');
+                nameToast.classList.remove('show');
+                document.body.style.overflow = '';
             }
+
+            toastBtn.addEventListener('click', saveName);
+            toastInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') saveName();
+            });
         }
     }
 
@@ -544,8 +499,8 @@ if (visitorNameSpan && nameToast) {
             ],
             tags: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage'],
             icon: 'fa-user',
-            demoUrl: '#',
-            githubUrl: '#'
+            demoUrl: 'https://helmy-arsyad.github.io/CodingCamp-23Feb26-Helmy/',
+            githubUrl: 'github.com/helmy-arsyad/CodingCamp-23Feb26-Helmy'
         }
     };
 

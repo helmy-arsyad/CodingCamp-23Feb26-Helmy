@@ -140,15 +140,20 @@ body::before {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   25% {
     transform: translate(30px, -30px) rotate(5deg);
   }
+
   50% {
     transform: translate(0, -60px) rotate(0deg);
   }
+
   75% {
     transform: translate(-30px, -30px) rotate(-5deg);
   }
@@ -363,10 +368,13 @@ nav {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.5;
   }
+
   50% {
     transform: translate(-50%, -50%) scale(1.2);
     opacity: 0.8;
@@ -389,17 +397,44 @@ nav {
   animation: float-particle 15s infinite;
 }
 
-.particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-.particle:nth-child(2) { left: 20%; top: 80%; animation-delay: 2s; }
-.particle:nth-child(3) { left: 60%; top: 10%; animation-delay: 4s; }
-.particle:nth-child(4) { left: 80%; top: 60%; animation-delay: 6s; }
-.particle:nth-child(5) { left: 90%; top: 30%; animation-delay: 8s; }
+.particle:nth-child(1) {
+  left: 10%;
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  left: 20%;
+  top: 80%;
+  animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+  left: 60%;
+  top: 10%;
+  animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+  left: 80%;
+  top: 60%;
+  animation-delay: 6s;
+}
+
+.particle:nth-child(5) {
+  left: 90%;
+  top: 30%;
+  animation-delay: 8s;
+}
 
 @keyframes float-particle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1);
     opacity: 0.3;
   }
+
   50% {
     transform: translateY(-100px) scale(1.5);
     opacity: 0.6;
@@ -427,6 +462,7 @@ nav {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -438,6 +474,7 @@ nav {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -449,6 +486,7 @@ nav {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -600,6 +638,7 @@ nav {
     top: 0;
     opacity: 1;
   }
+
   100% {
     top: 100%;
     opacity: 0;
@@ -1526,6 +1565,7 @@ nav {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -1846,11 +1886,11 @@ nav {
   transition: var(--transition-smooth);
 }
 
-.gender-option input:checked + .radio-custom {
+.gender-option input:checked+.radio-custom {
   border-color: var(--accent-primary);
 }
 
-.gender-option input:checked + .radio-custom::after {
+.gender-option input:checked+.radio-custom::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -2151,8 +2191,13 @@ footer {
    ANIMATIONS
    ======================================== */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -2160,6 +2205,7 @@ footer {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2171,9 +2217,17 @@ footer {
   animation: slideUp 0.6s ease-out forwards;
 }
 
-.hobby-card:nth-child(1) { animation-delay: 0.1s; }
-.hobby-card:nth-child(2) { animation-delay: 0.2s; }
-.hobby-card:nth-child(3) { animation-delay: 0.3s; }
+.hobby-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.hobby-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.hobby-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 .form-card,
 .info-card {
@@ -2200,6 +2254,7 @@ footer {
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 1024px) {
+
   .hero-content,
   .profile-hero-content {
     grid-template-columns: 1fr;
@@ -2353,6 +2408,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
   .name,
   .profile-name {
     font-size: 2rem;
@@ -2376,6 +2432,7 @@ footer {
     margin-bottom: 2rem;
   }
 }
+
 /* Name Toast Notification */
 .name-toast {
   position: fixed;
