@@ -119,6 +119,7 @@ const visitorNameSpan = document.getElementById('visitor-name');
 const nameToast = document.getElementById('name-toast');
 const toastInput = document.getElementById('toast-name-input');
 const toastBtn = document.getElementById('toast-name-btn');
+const siteBlocker = document.getElementById('site-blocker');
 
 if (visitorNameSpan && nameToast) {
     const savedName = localStorage.getItem('visitorName');
@@ -126,10 +127,14 @@ if (visitorNameSpan && nameToast) {
     if (savedName) {
         visitorNameSpan.textContent = savedName;
     } else {
+        // Aktifkan blocker
+        siteBlocker.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
         setTimeout(() => {
             nameToast.classList.add('show');
             toastInput.focus();
-        }, 800);
+        }, 500);
 
         toastBtn.addEventListener('click', function () {
             const name = toastInput.value.trim();
@@ -141,7 +146,11 @@ if (visitorNameSpan && nameToast) {
 
             visitorNameSpan.textContent = name;
             localStorage.setItem('visitorName', name);
+
+            // Hilangkan blocker
             nameToast.classList.remove('show');
+            siteBlocker.classList.remove('active');
+            document.body.style.overflow = '';
         });
 
         toastInput.addEventListener('keypress', function (e) {
