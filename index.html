@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helmy Arsyad Darmawan</title>
+  <link rel="icon" href="https://i.ibb.co.com/7NVNB4jQ/Desain-tanpa-judul-1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- FIXED HEADER -->
+  <header class="fixed-header">
+    <div class="header-content">
+      <a href="/index" class="logo">Helmy.</a>
+      <nav>
+        <a href="/index" class="nav-link">Beranda</a>
+        <a href="/profile" class="nav-link">Profil Saya</a>
+        <a href="/portofolio" class="nav-link">Portofolio</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="greeting">Hi <span id="visitor-name">Visitor</span></p>
+        <h1 class="name"><span class="highlight">Helmy </span>Arsyad Darmawan</h1>
+        <p class="tagline">Pengembang Web & Problem Solver</p>
+        <div class="hero-buttons">
+          <a href="#hobby" class="btn btn-primary">Jelajahi</a>
+          <a href="/portofolio.html" class="btn btn-secondary">Karya Saya</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="image-frame">
+          <div class="frame-accent"></div>
+          <img src="https://i.ibb.co/7NVNB4jQ/Desain-tanpa-judul-1.png" alt="Helmy Arsyad">
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Gulir</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBBIES SECTION -->
+  <section class="profile-section" id="hobbies">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Hobi & Minat</span>
+        <h2 class="section-title"> Kegiatan di Luar Pemrograman</h2>
+        <p class="section-subtitle">Aktivitas yang membuat saya tetap produktif</p>
+      </div>
+
+      <div class="hobbies-grid">
+        <div class="hobby-card">
+          <div class="card-icon">
+            <img src="https://images.unsplash.com/photo-1617083934551-ac1f1b6a50ea?w=200&h=200&fit=crop"
+              alt="Badminton">
+          </div>
+          <h3>Badminton</h3>
+          <p>Olahraga kompetitif namun menyenangkan yang membuat saya tetap aktif dan fokus</p>
+          <div class="card-accent"></div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="card-icon">
+            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=200&h=200&fit=crop" alt="Futsal">
+          </div>
+          <h3>Futsal</h3>
+          <p>Semangat tim dan aksi cepat di lapangan indoor</p>
+          <div class="card-accent"></div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="card-icon">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=200&h=200&fit=crop"
+              alt="Sepak Bola">
+          </div>
+          <h3>Sepak Bola</h3>
+          <p>Permainan indah yang mengajarkan strategi dan kerja sama tim</p>
+          <div class="card-accent"></div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="card-icon">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=200&h=200&fit=crop"
+              alt="Olimpiad Matematika">
+          </div>
+          <h3>Olimpiad Matematika</h3>
+          <p>Mengikuti kompetisi matematika untuk melatih berpikir logis dan analitis</p>
+          <div class="card-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE SECTION -->
+  <section class="message" id="contact">
+    <div class="section-container">
+      <div class="message-grid">
+        <div class="form-card">
+          <div class="form-header">
+            <span class="section-tag">Hubungi Kami</span>
+            <h2 class="section-title">Kirim Pesan</h2>
+          </div>
+
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nama Anda</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="birthdate">Tanggal Lahir</label>
+              <input type="date" id="birthdate" name="birthdate">
+            </div>
+
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+              <div class="gender-options">
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="male">
+                  <span class="radio-custom"></span>
+                  Laki-laki
+                </label>
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="female">
+                  <span class="radio-custom"></span>
+                  Perempuan
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Kirim Pesan</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="info-card">
+          <div class="info-header">
+            <h2>Pesan Terbaru</h2>
+            <p>Pesan yang masuk akan ditampilkan di bawah</p>
+          </div>
+
+          <div class="info-content">
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <div class="info-text">
+                <span class="info-label">Waktu Saat Ini</span>
+                <span class="info-value" id="current-time">Memuat...</span>
+              </div>
+            </div>
+
+            <div class="info-divider"></div>
+
+            <div class="profile-info">
+              <h3>Pesan Masuk</h3>
+              <div class="messages-container" id="messages-container">
+                <!-- Messages will be dynamically inserted here -->
+                <div class="message-entry">
+                  <div class="message-header">
+                    <span class="message-name">Edo</span>
+                    <span class="message-time">2024-01-01 10:00:00</span>
+                  </div>
+                  <div class="message-details">
+                    <div class="profile-item">
+                      <span class="profile-label">Tanggal Lahir</span>
+                      <span class="profile-value">2007-01-01</span>
+                    </div>
+                    <div class="profile-item">
+                      <span class="profile-label">Jenis Kelamin</span>
+                      <span class="profile-value">Laki-laki</span>
+                    </div>
+                    <div class="profile-item">
+                      <span class="profile-label">Pesan</span>
+                      <span class="profile-value">Halo Helmy!</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Helmy</div>
+      <p class="footer-text">Dibuat dengan penuh semangat oleh <span>Helmy Arsyad Darmawan</span></p>
+      <div class="footer-social">
+        <a href="https://github.com/helmy-arsyad" class="social-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/helmy-arsyad-darmawan-5977103b1/" class="social-link" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.instagram.com/helmy_arsyad" class="social-link" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@satzzz.id" class="social-link" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+      <p class="copyright">© 2024 Helmy Arsyad Darmawan. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
