@@ -2420,3 +2420,17 @@ footer {
   color: white;
   cursor: pointer;
 }
+
+/* Overlay Blocker */
+.site-blocker {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 4000;
+  display: none;
+}
+
+.site-blocker.active {
+  display: block;
+}
