@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId !== '#') {
+            // Only handle internal hash links, skip external URLs
+            if (targetId && targetId.startsWith('#') && targetId !== '#') {
                 e.preventDefault();
                 const target = document.querySelector(targetId);
                 if (target) {
@@ -403,18 +404,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 issuer: 'Aksademy',
                 date: '2026'
             },
-            'sertifikat2': {
-                image: 'https://via.placeholder.com/400x300?text=Sertifikat+2',
-                title: 'Sertifikat Pelatihan',
-                issuer: 'Penyelenggara',
-                date: '2024'
-            },
-            'sertifikat3': {
-                image: 'https://via.placeholder.com/400x300?text=Sertifikat+3',
-                title: 'Sertifikat Lomba',
-                issuer: 'Penyelenggara',
-                date: '2024'
-            }
         };
 
         // Get certificate data based on ID
@@ -500,7 +489,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tags: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage'],
             icon: 'fa-user',
             demoUrl: 'https://helmy-arsyad.github.io/CodingCamp-23Feb26-Helmy/',
-            githubUrl: 'github.com/helmy-arsyad/CodingCamp-23Feb26-Helmy'
+            githubUrl: 'https://github.com/helmy-arsyad/CodingCamp-23Feb26-Helmy'
         }
     };
 

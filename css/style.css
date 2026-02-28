@@ -1538,6 +1538,7 @@ nav {
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(8px);
+  pointer-events: none;
 }
 
 .modal-content {
@@ -1552,6 +1553,7 @@ nav {
   overflow-y: auto;
   z-index: 1;
   animation: modalIn 0.3s ease;
+  pointer-events: auto;
 }
 
 @keyframes modalIn {
@@ -1683,6 +1685,9 @@ nav {
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition-smooth);
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
 }
 
 .demo-btn {
