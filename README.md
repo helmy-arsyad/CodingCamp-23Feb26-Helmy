@@ -155,27 +155,6 @@ CodingCamp-23Feb26-Helmy/
 
 ---
 
-## 🏆 Proyek
-
-### QUARTRIX
-Platform digital interaktif untuk siswa SMA Negeri 3 Blitar kelas 11-4. Memudahkan komunikasi dan berbagi informasi antar siswa dalam satu kelas.
-
-**Teknologi:** HTML5, CSS3, JavaScript, Firebase RTDB, LocalStorage
-
-### Portofolio Pribadi
-Website portofolio pribadi yang menampilkan profil, hobi, proyek, sertifikat, dan formulir kontak dengan desain modern dan animasi interaktif.
-
-**Teknologi:** HTML5, CSS3, JavaScript, LocalStorage
-
----
-
-## 📜 Sertifikat
-
-1. **Intro to Software Engineering** - RevoU (2026)
-2. **Belajar Dasar Pemrograman dengan Python** - Aksademy (2026)
-
----
-
 ## 📝 Lisensi
 
 Copyright © 2026 Helmy Arsyad Darmawan. All rights reserved.
