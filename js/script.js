@@ -404,6 +404,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 issuer: 'Aksademy',
                 date: '2026'
             },
+            'sertifikat2': {
+                image: 'https://i.ibb.co.com/tPL5Gv8Q/CCSE-kanganu22gmail-com-CCSE-230226-01-1-00044-page-0001.jpg',
+                title: 'Intro to Software Engineering',
+                issuer: 'RevoU',
+                date: '2026'
+            },
+            'sertifikat3': {
+                image: 'https://i.ibb.co.com/WN15gzKW/preview-sertifikat-AKS-262-OMY-page-0001.jpg',
+                title: 'Kickstart Your Web Journey: From Development Lifecycle to Coding Basic',
+                issuer: 'Aksademy',
+                date: '2026'
+            },
         };
 
         // Get certificate data based on ID
